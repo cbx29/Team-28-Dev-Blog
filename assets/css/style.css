@@ -560,7 +560,7 @@ section {
 }
 
 .features .tab-content {
-  text-align: right;
+  text-align: left;
 }
 
 @-webkit-keyframes slide-down {
