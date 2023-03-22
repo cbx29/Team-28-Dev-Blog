@@ -1089,25 +1089,26 @@ section {
 # Clients
 --------------------------------------------------------------*/
 .clients .clients-wrap {
-  border-top: 1px solid #eceff0;
-  border-left: 1px solid #eceff0;
+  /* border-top: 1px solid #eceff0; */
+  /* border-left: 1px solid #eceff0; */
+  background:#f4f6f7;
 }
 
 .clients .client-logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 1px solid #eceff0;
-  border-bottom: 1px solid #eceff0;
+  /* border-right: 1px solid #eceff0; */
+  /* border-bottom: 1px solid #eceff0; */
   overflow: hidden;
-  background: #fff;
+  background: #f4f6f7;
   height: 120px;
   padding: 40px;
 }
 
 .clients .client-logo img {
   max-width: 50%;
-  filter: grayscale(100);
+  /*filter: grayscale(100);*/
 }
 
 .clients .client-logo:hover img {

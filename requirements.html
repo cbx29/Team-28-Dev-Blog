@@ -128,15 +128,29 @@
   
           <div class="section-title" data-aos="fade-up">
             <h2>Project Background</h2>
-            <p>UCL MotionInput is a software package for touchless computing interactions. 
-              In it's 3rd generation, MotionInput recognizes speech commands, hand gestures, body gestures, facial expressions  
-              and eye movements all of which can be used in computing interactions for a single user.</p>
-              <br>
-
-            <p>Now our goal as a team is to build upon this work to extend recognition beyond a single user, allowing for multiple users to perform touchless
-              computing interactions via a single device and camera. </p>
+            <p>UCL MotionInput is a touchless computing system that enables users to interact with their computer 
+              using physical gestures captured by their web camera. The system was designed to enhance accessibility 
+              and provide a more intuitive way of interacting with digital content.
+              However, the previous version of MotionInput was limited in its multiplayer capabilities, 
+              which hindered its use in gaming scenarios. Our team identified this limitation 
+              and set out to develop a solution that would enable multiplayer interactions in gaming.
+              <br><br>
+              Our solution involved redesigning the hand and body modules of MotionInput to detect multiple bodies 
+              and sets of hands, and to map these detected body parts into specific events 
+              that can be added to newly created multiplayer gaming modes. 
+              This allowed us to create new gaming modes that were specifically designed for two players, 
+              thus enabling users to engage in multiplayer gaming scenarios 
+              without the need for physical controllers or input devices.
+              <br><br>
+              The new architecture we developed not only allowed for improved accessibility in gaming 
+              but also had potential applications in other fields such as physiotherapy. The gestures used to play our games
+              provide an excellent way of exercising injured limbs and joints, 
+              on the condition that the user is supervised by a physiotherapist.
+              Overall, our team successfully enhanced the functionality of MotionInput to better serve the needs of users, 
+              particularly in the gaming industry.
+            </p>
           </div>
-  
+
           <div class="row">   
           </div>
   
@@ -296,6 +310,116 @@
   
         </div>
       </section><!-- End User Interviews Section -->
+
+    <!-- ======= F.A.Q Section ======= -->
+    <section id="faq" class="faq">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>MoSCoW Requirement List</h2>
+        </div>
+
+        <ul class="faq-list">
+
+          <li>
+            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Must Have<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+              <br>
+                <ul>
+                  <li>Improved Hand and Body Landmark detectors</li>
+                  <li>Coordinate tracking of user hands, for triggering both extremity circles and punches</li>
+                  <li>Add new functionality to an MFC panel</li>
+                </ul>
+            </div>
+          </li>
+
+          <li>
+            <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Should Have<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+              <br>
+              <p>
+                <ul>
+                  <li>Additional accessibilty features e.g. gamepad height adjustment</li>
+                  <li>Extendable code - can easily add additional players</li>
+                </ul>
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Could Have<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+              <br>
+              <p>
+                <ul>
+                  <li>Generate an energy report that can be sent to Intel</li>
+                  <li>Detection and tracking of 3 or more users</li>
+                </ul>
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Won't Have<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+              <br>
+              <p>
+                <ul>
+                  <li>Game modes that require controls to be mapped to the mouse, impossible to implement multiplayer</li>
+                </ul>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+     <!-- ======= Clients Section ======= -->
+     <section id="clients" class="clients">
+      <div>
+        <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo" data-aos="zoom-in" data-aos-delay="50">
+              <img src="assets/img/University_College_London_logo.svg" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo" data-aos="zoom-in" data-aos-delay="100">
+              <img src="assets/img/Microsoft-Logo.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo" data-aos="zoom-in" data-aos-delay="150">
+              <img src="assets/img/IBM.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo" data-aos="zoom-in" data-aos-delay="200">
+              <img src="assets/img/Intel-logo-2022.png" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Scaffold</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/scaffold-bootstrap-metro-style-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+    </section><!-- End Clients Section -->
 
   </main><!-- End #main -->
 

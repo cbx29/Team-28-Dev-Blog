@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/ChildsPlayVersusSq.png" rel="icon">
+  <link href="assets/img/ChildsPlayVersusSq.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -128,8 +128,10 @@
   <main id="main">
     <!-- ======= Landmark Detector Section ======= -->
     <section id="handlandmarkdetector" class="testimonials">
+      <div class="services section-bg">
         <div class="container">
           <div class="section-title" data-aos="fade-up">
+            <br>
             <h2>New Hand & Body Landmark Detector</h2>
             <p>
                 To provide a better understanding of the HandLandmarkDetector, 
@@ -171,52 +173,131 @@
                 <br><br>
                 The body module works in the same way as described for the hand module
             </p>
+            </div>
           </div>
         </div>
       </section> 
       <!-- End Landmark Detector Section -->
 
-      <!-- ======= Adventure Extremity Mode Section ======= -->
-    <section id="adventureextremity" class="services section-bg">
-        <div class="container">
-          <div class="section-title" data-aos="fade-up">
-            <h2>Adventure Extremity</h2>
-            <p> The model is developed based on the extremity circle mode. It supports playing games that use direction keys. Here is the list of new buttons:  
-              <br><br>
-              <img src="assets/img/advex1.jpg" class="img-fluid" alt="" width="500" height="500">
-
-            </p>
-          </div>
-        </div>
-      </section><!-- End Technology Research Section -->
-    
-     <!-- ======= Literature Review Video Section ======= -->
-    <section id="literature" class="about">
+    <!-- ======= New Game Modes Section ======= -->
+    <section id="faq" class="faq">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-6" data-aos="zoom-in">
-            <video src="assets/img/TetrisDemo.mp4" class="img-fluid" controls></video>
-            <video src="assets/img/TetrisDemo2.mp4" class="img-fluid" controls></video>
-          </div>
-          <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
-            <div class="content pt-4 pt-lg-0">
-              <h3>Multiplayer Tetris Demos</h3>
-              <p class="fst-italic">
-                In this video, we demonstrate the progress we have made, in implementing motioninput controls 
-                for a multiplayer version of Tetris.
-              </p>
-              <ul>
-                <li><i class="bi bi-check-circle"></i> Rotate blocks using top button</li>
-                <li><i class="bi bi-check-circle"></i> Shift blocks using left and right buttons</li>
-                <li><i class="bi bi-check-circle"></i> Drop blocks using lower button</li>
-                <li><i class="bi bi-check-circle"></i> Multiplayer functionality</li>
-              </ul>
-            </div>
-          </div>
+        <div class="section-title" data-aos="fade-up">
+          <h2>New Game Modes</h2>
         </div>
+        <ul class="faq-list">
+          <li>
+            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Adventure Extremity<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+              <div class="section-title" data-aos="fade-up">
+              <p> The model is developed based on the extremity circle mode. It supports playing games that use direction keys. 
+                <img src="assets/img/advex2.png" class="img-fluid" alt="" width="500" height="500">
+                <br><br>
+                Here is the list of new buttons:  
+                <br><br>
+                <img src="assets/img/advex1.jpg" class="img-fluid" alt="" width="500" height="500">
+              </p>
+              </div>
+            </div>
+          </li>
 
+          <li>
+            <div data-bs-toggle="collapse" class="collapsed question" href="#faq2">Hand Drive Mode<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+              <div>
+                <p>From a high level, this mode maps Player 1’s movements to “w”, “s”, “a” and “d” and Player 2’s movements 
+                  to the left arrow, right arrow, up arrow and down arrow. Therefore, this mode can be played with driving games 
+                  that are configured to work with such keys. From a more technical perspective, events in the mode are mapped 
+                  to Left0, RIght0, Left1 and Right 1. Each pair of forward backward events and rotate events 
+                  for a single player are mapped to a pair of Left-Right hands. Despite the events being duplicated, 
+                  for example, “hand_drive_left_right_multiplayer_1” and “hand_drive_left_right_multiplayer_2”, 
+                  these events each have their own implementation of the “HandDriveMultiplayerRotateEvent” Class 
+                  as the bodypart_names_to_type argument in the events JSON takes values “dom_hand_1” and “off_hand_1”, 
+                  and these values are referenced precisely in the Class implementations.
+                  Hence the same class cannot be reused across events despite duplicate logic. 
+                  Assuming the logic described above, the forward backward events are also configured in that manner, 
+                  and all such events are added to the hand_drive_multiplayer mode.
+                  <br><br>
+                </p>
+                <br><br>
+              </div>
+            </div>
+          </li>
+
+
+          <li>
+            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Punch Mode<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+              <div>
+                <p> This game mode is designed for mulitplayer fighting games and is based on the work of Imaad Zaffar 
+                    from Team 38, who implemented a single player punching mode. It supports playing games that use direction keys, 
+                    by mapping user punching gestures to wasd keys. To create the single player version, Imaad created 
+                    a new gesture named "punch_simple" which is defined as a hand with the index, middle, ring and pinky landmarks 
+                    all folded. Then, the corresponding gesture event named "PunchSimpleEvent" identifies the gesture 
+                    and tracks the z-value of the punch. If the punch passes the depth threshold, specified in the event jsons,
+                    then the punch is registered and the corresponding key is pressed. To implement multiplayer functionality,
+                    we defined a second gesture event called "PunchSimpleEvent2". In order to ensure backward compatability, 
+                    we also defined separate punching events for multiplayer use, in "events.json", 
+                    named "hand_punch_simple_left_hand_1", "hand_punch_simple_right_hand_1", 
+                    "hand_punch_simple_left_hand_2", and "hand_punch_simple_right_hand_2"
+              <br><br>
+              </p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Foot Mode<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+              <div class="section-title" data-aos="fade-up">
+                <p> The model is developed based on the extremity circle mode. It supports playing games that use direction keys. Here is the list of new buttons:  
+                  <br><br>
+                  <img src="assets/img/foot_mode_controls.png" class="img-fluid" alt="" width="500" height="500">
+                  </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Gun Mode<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+              <div>
+                <p>There are three parts to the Light Gun Multiplayer Implementation:
+                  <br><br>
+                  1. The HandJoystickMovementHandBox - The Handjoystick Boxes are the boxes that are on both sides of the screen, 
+                  mapping a hand's position to key presses on the keyboard 
+                  (example, Player 1 having their hand on the right side of the screen results in the “d” key being pressed). 
+                  These boxes also detect the gun shoot action and translate that into a keyboard action as well.
+                  <br><br>
+                  2. The HandJoystickBox — This class is used to determine the position (and size) of the actual boxes 
+                  seen on screen. The two boxes seen require their own classes and the classes are passed as arguments 
+                  in the events within the events.json file.
+                  <br><br>
+                  3. The light_gun_multiplayer.json itself. This is the file that is referenced when changing the mode 
+                  in the mode_controller.json. The events in the mode are the events present in this file, 
+                  which is currently set for Player 1 to shoot with their right hand and for Player 2 to shoot with their left hand.
+                  <br><br>
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        </div>
       </div>
-    </section><!-- End Demo Video Section -->
+    </section><!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Landmark Detector Section ======= -->
+    <section id="handlandmarkdetector" class="testimonials">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>New Extremity Buttons</h2>
+          <p>
+            The colour of extremity buttons have been changed to blue and yellow by editing the code in the display_object.py.
+            This is mainly for aesthetic purposes, ahead of the deployment of our project.
+          </p>
+        </div>
+      </div>
+    </section> 
+    <!-- End Landmark Detector Section -->
 
     <!-- ======= Game Modes Section ======= -->
   <section id="interviews" class="features">
@@ -224,7 +305,7 @@
 
         <div class="row">
           <div class="col-lg-6 mt-2 mb-tg-0 order-2 order-lg-1">
-          <h2>Game Modes</h2>  
+          <h2>Game Mode Demos</h2>  
             <ul class="nav nav-tabs flex-column">
               <li class="nav-item" data-aos="fade-up">
                 <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
@@ -287,6 +368,54 @@
 
       </div>
     </section><!-- End User Interviews Section -->
+
+     <!-- ======= Clients Section ======= -->
+     <section id="clients" class="clients">
+      <div>
+        <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo" data-aos="zoom-in" data-aos-delay="50">
+              <img src="assets/img/University_College_London_logo.svg" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo" data-aos="zoom-in" data-aos-delay="100">
+              <img src="assets/img/Microsoft-Logo.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo" data-aos="zoom-in" data-aos-delay="150">
+              <img src="assets/img/IBM.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="client-logo" data-aos="zoom-in" data-aos-delay="200">
+              <img src="assets/img/Intel-logo-2022.png" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Scaffold</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/scaffold-bootstrap-metro-style-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+    </section><!-- End Clients Section -->
 
 
   </main><!-- End #main -->

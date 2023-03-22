@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Scaffold Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!--Social Media Icons-->
+  <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <!-- =======================================================
+  * Template Name: Scaffold - v4.10.0
+  * Template URL: https://bootstrapmade.com/scaffold-bootstrap-metro-style-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo me-auto">
+        <h1><a href="blog.html">Team 28</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto" href="#faq">Week 12</a></li>
+          <li><a class="nav-link scrollto" href="#faq">Week 14</a></li>
+          <li><a class="nav-link scrollto" href="#faq">Week 16</a></li>
+          <li><a class="nav-link scrollto" href="#faq">Week 20</a></li>
+          <li><a class="nav-link scrollto" href="#faq">Week 22</a></li>
+          <li><a class="nav-link scrollto" href="#faq">Week 24</a></li>
+          <li><a class="nav-link scrollto" href="#faq">Week 26</a></li>
+          <li><a class="nav-link scrollto" href="#faq">Week 28</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <!--<div class="header-social-links d-flex align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>-->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= System Design Section ======= -->
+  <section id="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
+          <div>
+            <h1>Blog</h1>
+            <h2>Improving Accessibility in Gaming</h2>
+            <a href="#abstract" class="btn-get-started scrollto">Get Started</a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
+          <img src="assets/img/hero-img.png" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- System Design Hero -->
+
+   <!-- ======= F.A.Q Section ======= -->
+   <section id="faq" class="faq">
+    <div class="container">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Biweekly Blog Entries</h2>
+      </div>
+      <ul class="faq-list">
+        <li> 
+          <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Week 12<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+          <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+            <section id="faqq1">
+            <p>
+                Our main objective of the week was to complete the demonstration component of our project to 
+                showcase its functionality. Specifically, the demo program should be capable of recognizing 
+                multiple hands using MediaPipe and tracking their positions separately. 
+                
+                To achieve this, we first examined MediaPipe's ability to recognize multiple hands. However, we observed that the landmark 
+                labels are not segregated by experiments, leading to only two types of labels - Right and Left. 
+                The major issue we faced was how to distinguish between different hands. 
+                
+                To address this problem, we considered various methods. Initially, we proposed splitting the screen 
+                into two sections and restricting users' movement range. However, this method significantly reduced 
+                the range of motion for users, limiting their exercise experience.
+
+                Alternatively, we received guidance from our Teaching Assistant and devised a tracking method. 
+                This technique identifies hands based on landmarks obtained from the previous frame. 
+                The program calculates the distance between the landmarks of the current frame hand and those of the last frame. 
+                The hand is identified as the label of the nearest last frame hand. 
+                To minimize landmark effects, we opted for wrist landmarks as they are representative.
+
+                At the same time, we also conducted research in to existing touchless computing technologies 
+                and produced a literature review, that informed us of other potential alternatives we could use
+                to solve the problem of multi-hand recognition and the number/type of buttons we would need to map 
+                in order to play multiplayer games with MotionInput technology. 
+
+                Concurrently, those in our team with MacBooks made arrangements to borrow Windows laptops 
+                in order to run MotionInput.
+            </p>
+            </section>
+          </div>
+        </li>
+        <li>
+          <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Week 14<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+          <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+            <br>
+            <p>
+                During the current week, our focus was on investigating the Mediapipe library to comprehend its 
+                functionality and output datatype, as well as gaining a better understanding of the entire structure of the 
+                MotionInput project. This approach was vital in merging the demo algorithm into the MotionInput project seamlessly.
+
+                The recognition result produced by Mediapipe is arranged in the form of a list, 
+                with each item containing information about one hand and its type of NormalizedLandmarkList. 
+                One attribute of the NormalizedLandmarkList is a landmark that contains 21 landmarks, 
+                including the RING_FINGER_TIP.
+
+                Presently, the MotionInput project does not support multi-player because it cannot distinguish between 
+                different hand labels. Our initial approach was to locate the file that controls the Mediapipe output data, 
+                which is the hand_landmark_detector. As our method requires information from the last frame, 
+                we attempted to determine how to pass this information to the detector. However, 
+                storing the previous frame's data would require significant storage space, resulting in program inefficiency.
+
+                Therefore, we adopted a new approach in which the detector tracks the hands using only the current 
+                frame information. This approach eliminates the need for storing data from previous frames, 
+                resulting in a more efficient program.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Week 16<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+          <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+            <br>
+            <p>
+                During this week, we continued our work from the previous week by implementing and completing the latest method.
+                Due to the current frame information, we are unable to track the hand positions as effectively. 
+                
+                Instead, we identify each hand based on its position within the current frame. 
+                The first left/right hand identified from left to right will be referred to as Left0/Right0, 
+                followed by Left1/Right1, and so on. As a result, the rawData will be filled with 
+                {left0:landmarks, left1:landmarks, right0:landmarks, right1:landmarks}. The remaining sections of the program 
+                should function seamlessly.
+                
+                This new approach enables us to efficiently identify each hand based on their position within 
+                the current frame without requiring the storage of previous frame data.
+                
+                In preparation for developing gesture controls, we then studied the motion input code base and produced 
+                a list of relevant supported gestures that could be used for controls in multiplayer games.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Week 20<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+          <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+            <br>
+            <p>
+                We worked on developing the events and event-handler portion to ensure that the correct keyboard key 
+                was pressed after the correct landmarks were identified. After comparing the different modes, 
+                we chose to develop initially on gamepad mode 2 as it is well-formed and suitable for gaming. 
+                To implement this mode, we developed an event handler that received input from hand landmarks and 
+                simulated a keystroke. We conducted extensive testing and debugging to ensure the event handler's effectiveness. 
+                Overall, choosing the appropriate mode and implementing a robust event handler is crucial in developing an effective hand gesture recognition system.
+
+                At the same time, we created our project website, uploading most of the initial Human Computer Interaction work such as our interviews, personas, scenarios, sketches and prototypes, as well as our literature review.
+                
+                We then prepared our Powerpoint presentation slides, in preparation for the elevator pitch, to showcase our work so far.                
+            </p>
+          </div>
+        </li>
+
+        <li>
+            <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Week 22<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+              <br>
+              <p>
+                We finalised our elevator pitch presentation, deciding to cut out the majority of the 
+                technical details included in our first draft in order to tailor our presentation to a wider range of audiences.
+
+                Once we had decided to develop on gamepad mode 2, we began editing the necessary configuration files 
+                to integrate our code. This involved carefully studying the structure and syntax of the configuration files 
+                to ensure that our modifications were correct and compatible with the existing codebase.
+
+                One of the primary configuration files we worked on was the config.json file, which specifies 
+                the mapping between hand gestures and their corresponding keyboard keys. We carefully reviewed 
+                the existing mappings and modified them to ensure that they were suitable for our application.
+
+                In addition to editing the config.json file, we also made changes to other JSON files to ensure 
+                that our code was properly integrated into the gamepad mode 2 system. This involved working closely with 
+                the existing codebase and carefully testing each modification to ensure that it was functioning correctly.
+
+                Throughout this process, we paid close attention to the details and worked carefully to ensure that 
+                our modifications were consistent with the overall design and functionality of the hand gesture recognition system. 
+                By taking a methodical and meticulous approach, we were able to successfully integrate 
+                our code into the gamepad mode 2 system and ensure that it was functioning effectively.
+              </p>
+            </div>
+        </li>
+        <li>
+            <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Week 24<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+              <br>
+              <p>
+                We modified the code to allow for two players to play at the same time on gamepad_mode_2 and thoroughly tested 
+                and debugged the system to ensure it was reliable. The feature greatly enhances the system's versatility 
+                and user experience.
+
+                Building upon the initial work on gamepad mode 2, we were able to make the position of the 
+                gamepad extremity buttons adjustable, by adapting the existing “butterfly” speech command, 
+                used in the nose navigation mode. This feature is key to our project, by further 
+                improving accessibility in gaming, and allowing people of all heights to reach the extremity buttons comfortably.
+
+                This concluded our work on gamepad mode 2, and we then proceeded to record a demo video, 
+                of us using the mode to play a multiplayer version of Tetris. We then added this video along with our 
+                elevator pitch video from last week to our project website.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div data-bs-toggle="collapse" href="#faq7" class="collapsed question">Week 26<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq7" class="collapse" data-bs-parent=".faq-list">
+              <br>
+              <p>
+                Upon finishing the gamepad mode, we shifted our attention to developing the painting mode to support 
+                multiplayer functionality. However, after linking the events, we encountered an issue where the system 
+                was not functioning properly on the computer. In order to develop a multiplayer painting mode, 
+                it was necessary to have a cursor on the screen for each user. We conducted research into the 
+                possibility of having multiple cursors on one screen, such as installing and experimenting with an 
+                application called MouseMux. Unfortunately, while the app allowed multiple mice to be connected to 
+                a single laptop, the mice were all still configured to a single cursor. 
+                It was therefore deemed impossible to have a second cursor on the screen, to implement this mode.
+
+                After careful consideration and discussion with the clients, we came to the decision to abandon 
+                the development of this mode. Although it was disappointing to encounter such a roadblock, it is important to recognize and adapt to limitations and obstacles in order to prioritize the success and effectiveness of the overall system.
+
+                On the other hand, we had also begun development of multiplayer hand drive mode. 
+                The architecture for multiplayer hand drive was different from gamepad mode 2 as it required us to 
+                map Left0, Right0, Left1, and Right1 to specific events, as opposed to hitting extremity targets
+                as in GamepadMode2. After 2 weeks of development, we had successfully created multiplayer 
+                hand drive mode and tested it on a range of driving games that used “w”, “s”, “a”, and “d” to 
+                control one car and the up, down, left, right arrows keys to control another car.
+
+                In addition to this, we started working on the MFC application. The MFC design generally followed 
+                the template for Multitouch but we added another drop down button for the user to change modes 
+                depending on the game that they wanted to play.  So for example the if the user selected the option 
+                to play the multplayer hand drive games, the MFC would change the current mode to be the multiplayer 
+                hand drive mode in the mode_controller.json and so on. As the other functionality of the MFC had 
+                already been written, the features regarding the low light and FPS(Frames Per Second) and so on were 
+                already working. The option to select hand preference wasn’t needed in our project as the games 
+                require both hands to play.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div data-bs-toggle="collapse" href="#faq8" class="collapsed question">Week 28<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq8" class="collapse" data-bs-parent=".faq-list">
+              <br>
+              <p>
+                We continued working on the adventure game and incorporated the ability to play a tank game within it. 
+                Furthermore, we also implemented a feature to allow specially-abled users to play the game using their feet.
+
+                To accomplish this, we had to consider various factors such as the appropriate control mechanisms, 
+                accessibility, and ease of use for disabled users. Through extensive research and consultation with 
+                medical professionals and disabled individuals, we were able to design a control mechanism that would 
+                enable players to use their feet.
+
+                After implementing this feature, we carefully tested and debugged the system to ensure that it was 
+                functioning optimally and was user-friendly for disabled users. Through various trials and feedback 
+                from disabled individuals, we made necessary adjustments and improvements to ensure the mode was accessible 
+                and effective.
+
+                Overall, this new feature adds a new layer of accessibility and inclusivity to the adventure game 
+                and allows a wider range of individuals to enjoy and engage with the game.
+
+                Meanwhile, we also successfully created a multiplayer boxing mode, by liaising with Team 38 and 
+                adapting their single player punching mode which maps user punch gestures to keyboard strokes.
+
+                On the other hand, we also worked with those from Team 26 to create a multiplayer mode for 
+                their newly created light gun mode as well. We had to make some adjustments though, 
+                as their light gun mode relied on mouse clicks, but since we wanted to have multiplayer mode, 
+                we had to adapt this mode to map hand movements into keyboard actions. However, we could not 
+                find any multiplayer games online were split screen and that only relied on keyboard mapppings. 
+                Therefore, we had to use the PS1 DuckStation emulator and mapped the Controller 1 and Controller 2 settings 
+                to the relevant key bindings. We then played the Point Blank shooting game on the emulator and 
+                recorded our demo video.
+
+                With the completion of these two new modes, we then recorded further demo videos, which we again uploaded 
+                on to our project website.
+
+                Regarding the MFC, once writing to the mode controller and checking that each mode was altered correctly, 
+                we found that for the foot mode and the adventure mode we needed to activate certain extremity triggers 
+                in the config.json. For the adventure mode, we needed to activate 10 extremity triggers as the usual 
+                each player gets up, down, left, right and shoot which is the same for both tank and Tetris games. 
+                For the foot mode we found we needed to activate 8 extremity triggers as each player 
+                gets up, down, left and right. Finally, we needed to ensure that the mulitplayers mode was set to 
+                true otherwise only one person would be able to play games. Once compiling the MotionInput code
+                and going through the process of testing the MFC works with the code, we found that once we execute 
+                the MFC nothing happens and the MoionInput exe doesn’t open. After seeing a small bug within the path names, 
+                we fixed the MFC, and after launching with the compiled MotionInput code, 
+                we were able to switch between modes easily. 
+              </p>
+            </div>
+          </li>
+      </ul>
+    </div>
+  </section><!-- End Frequently Asked Questions Section -->
+
+   <!-- ======= Clients Section ======= -->
+   <section id="clients" class="clients">
+    <div>
+      <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="50">
+            <img src="assets/img/University_College_London_logo.svg" class="img-fluid" alt="">
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="100">
+            <img src="assets/img/Microsoft-Logo.png" class="img-fluid" alt="">
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="150">
+            <img src="assets/img/IBM.png" class="img-fluid" alt="">
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="client-logo" data-aos="zoom-in" data-aos-delay="200">
+            <img src="assets/img/Intel-logo-2022.png" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======= Footer ======= -->
+<footer id="footer">
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Scaffold</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/scaffold-bootstrap-metro-style-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </div>
+</footer><!-- End Footer -->
+
+  </section><!-- End Clients Section -->
+
+  </main><!-- End #main -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
