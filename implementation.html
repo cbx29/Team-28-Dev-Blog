@@ -126,8 +126,8 @@
   <!-- System Design Hero -->
 
   <main id="main">
-    <!-- ======= Landmark Detector Section ======= -->
-    <section id="handlandmarkdetector" class="testimonials">
+    <!-- ======= New Landmark Detectors Section ======= -->
+    <section id="landmarkdetectors" class="testimonials">
       <div class="services section-bg">
         <div class="container">
           <div class="section-title" data-aos="fade-up">
@@ -177,10 +177,10 @@
           </div>
         </div>
       </section> 
-      <!-- End Landmark Detector Section -->
+      <!-- End New Landmark Detectors Section -->
 
     <!-- ======= New Game Modes Section ======= -->
-    <section id="faq" class="faq">
+    <section id="gamemodes" class="faq">
       <div class="container">
         <div class="section-title" data-aos="fade-up">
           <h2>New Game Modes</h2>
@@ -189,8 +189,20 @@
           <li>
             <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Adventure Extremity<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-              <div class="section-title" data-aos="fade-up">
-              <p> The model is developed based on the extremity circle mode. It supports playing games that use direction keys. 
+              <div>
+              <p> 
+                In implementing this mode, we create extremities triggers (large colored buttons which act as hit targets) 
+                in the config.json file. These extremity triggers map to keyboard actions, and their position on screen are 
+                specified by the coordinates key. These extremity buttons are configured to be triggered by the wrist of 
+                an individual. Note that in this case, we do not have to specify if Player 1 or Player 2 hits an extremity, 
+                just whether a left wrist or a right wrist hits an extremity.   
+                These extremities are then added to the gestures.json file, and into the _gestures_types property within 
+                the GamepadMode2 Class in gamepad_event.py. The event triggers property of the Class is also overwritten 
+                with these extremity values in order to actually display them on screen. The final step in implementing 
+                this class was to add all of these events to the GamepadMode2 Class.
+                <br><br>
+                The model is developed based on the extremity circle mode. It supports playing games that use direction keys.
+                <br> 
                 <img src="assets/img/advex2.png" class="img-fluid" alt="" width="500" height="500">
                 <br><br>
                 Here is the list of new buttons:  
@@ -205,9 +217,16 @@
             <div data-bs-toggle="collapse" class="collapsed question" href="#faq2">Hand Drive Mode<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq2" class="collapse" data-bs-parent=".faq-list">
               <div>
-                <p>From a high level, this mode maps Player 1’s movements to “w”, “s”, “a” and “d” and Player 2’s movements 
+                <p>
+                  <img src="assets/img/handdrivesketch.jpeg" class="img-fluid" alt="" width="500" height="500">
+                  <br>
+                  From a high level, this mode maps Player 1’s movements to “w”, “s”, “a” and “d” and Player 2’s movements 
                   to the left arrow, right arrow, up arrow and down arrow. Therefore, this mode can be played with driving games 
-                  that are configured to work with such keys. From a more technical perspective, events in the mode are mapped 
+                  that are configured to work with such keys. 
+                  <br><br>
+                  <img src="assets/img/thumbs.jpg" class="img-fluid" alt="" width="500" height="500">
+                  <br><br>
+                  From a more technical perspective, events in the mode are mapped 
                   to Left0, RIght0, Left1 and Right 1. Each pair of forward backward events and rotate events 
                   for a single player are mapped to a pair of Left-Right hands. Despite the events being duplicated, 
                   for example, “hand_drive_left_right_multiplayer_1” and “hand_drive_left_right_multiplayer_2”, 
@@ -217,7 +236,7 @@
                   Hence the same class cannot be reused across events despite duplicate logic. 
                   Assuming the logic described above, the forward backward events are also configured in that manner, 
                   and all such events are added to the hand_drive_multiplayer mode.
-                  <br><br>
+                  <br>
                 </p>
                 <br><br>
               </div>
@@ -261,7 +280,10 @@
             <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Gun Mode<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq5" class="collapse" data-bs-parent=".faq-list">
               <div>
-                <p>There are three parts to the Light Gun Multiplayer Implementation:
+                <p>
+                  <img src="assets/img/gunmodesketch.jpeg" class="img-fluid" alt="" width="500" height="500">
+                  <br><br>
+                  There are three parts to the Light Gun Multiplayer Implementation:
                   <br><br>
                   1. The HandJoystickMovementHandBox - The Handjoystick Boxes are the boxes that are on both sides of the screen, 
                   mapping a hand's position to key presses on the keyboard 
@@ -276,6 +298,13 @@
                   in the mode_controller.json. The events in the mode are the events present in this file, 
                   which is currently set for Player 1 to shoot with their right hand and for Player 2 to shoot with their left hand.
                   <br><br>
+                  Here is an example for an event configured for this mode:
+                  <br>
+                  <img src="assets/img/lightguncode.png" class="img-fluid" alt="" width="500" height="500">
+                  <br><br>
+                  As seen above, both the HandJoystickMovementHandBox and the HandJoystickBox are passed as 
+                  arguments to the event, and serve their respective purposes. Also observe how "Right0" is 
+                  passed as an argument here as we are configuring for Multiplayer. 
                 </p>
               </div>
             </div>
@@ -283,29 +312,31 @@
         </ul>
         </div>
       </div>
-    </section><!-- End Frequently Asked Questions Section -->
+    </section><!-- End New Game Modes Section -->
 
-    <!-- ======= Landmark Detector Section ======= -->
-    <section id="handlandmarkdetector" class="testimonials">
+    <!-- ======= New Extremity Buttons Section ======= -->
+    <section id="extremitybuttons" class="services section-bg">
       <div class="container">
         <div class="section-title" data-aos="fade-up">
           <h2>New Extremity Buttons</h2>
           <p>
             The colour of extremity buttons have been changed to blue and yellow by editing the code in the display_object.py.
             This is mainly for aesthetic purposes, ahead of the deployment of our project.
+            <br><br>
+            <img src="assets/img/extremitybuttons.png" class="img-fluid" alt="" width="500" height="500">
           </p>
         </div>
       </div>
     </section> 
-    <!-- End Landmark Detector Section -->
+    <!-- End New Extremity Buttons Section -->
 
-    <!-- ======= Game Modes Section ======= -->
-  <section id="interviews" class="features">
+    <!-- ======= Game Mode Demo Videos Section ======= -->
+  <section id="demovideos" class="features">
       <div class="container">
 
         <div class="row">
           <div class="col-lg-6 mt-2 mb-tg-0 order-2 order-lg-1">
-          <h2>Game Mode Demos</h2>  
+          <h2>Game Mode Demo Videos</h2>  
             <ul class="nav nav-tabs flex-column">
               <li class="nav-item" data-aos="fade-up">
                 <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
@@ -367,7 +398,7 @@
         </div>
 
       </div>
-    </section><!-- End User Interviews Section -->
+    </section><!-- End Game Mode Demo Videos Section -->
 
      <!-- ======= Clients Section ======= -->
      <section id="clients" class="clients">
